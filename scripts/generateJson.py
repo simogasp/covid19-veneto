@@ -1,0 +1,167 @@
+#!/usr/bin/env python3
+
+import pandas as pd
+from typing import List
+import os
+import argparse
+import re
+import json
+import warnings
+
+
+def get_all_cases(base_dir: str) -> dict:
+    """
+    Get the list of all cases file 'casesYYYYMMDD.cvs'
+    Args:
+        base_dir (str): the folder where to look for the files.
+
+    Returns:
+        A dictionary where the key is the date in YYYYMMDD format and the value the filename
+    """
+    cases_dict = {}
+    reg_compile = re.compile(r"cases(\d{8}).csv")
+    for dir_path, dir_names, filenames in os.walk(base_dir):
+        for filename in sorted(filenames):
+            res = reg_compile.match(filename)
+            if res:
+                cases_dict[res.group(1)] = os.path.join(dir_path, filename)
+
+    return cases_dict
+
+
+def read_all_cases(files_dict: dict) -> dict:
+    """
+    Given the list of case files, read all the file and populate a dictionary with the relevant data
+    Args:
+        files_dict (dict): the key is the data, the value the filename (see :py:func: `get_all_cases()`)
+
+    Returns:
+        A dictionary containing all the data.
+        Each key is a city (str)
+        The value of each key is a dictionary containing 2 keys, 'totale_positivi' and 'isolamento'
+        For each of these 2 keys, the value is a dictionary with date as a key and the relevant number as value.
+    """
+    cases_dict = {}
+    for date, filename in files_dict.items():
+        print(date)
+        # load csv
+        df = pd.read_csv(filename)
+        df.fillna(value=0, inplace=True)
+        # for each row
+        for index, row in df.iterrows():
+            # the residence is the key
+            city = row['residenza']
+            if not isinstance(city, str):
+                raise TypeError('city must be a string in ' + filename)
+            # at the beginning Lombardia was counted then i guess it was merged in a more general category
+            if city == 'Lombardia':
+                city = 'Domicilio fuori Veneto'
+            # I'm assuming that Padova always was without the Vo' cluster
+            if city == "Padova (escluso domiciliati Vo')":
+                city = 'Padova'
+            # initialize
+            if city not in cases_dict:
+                cases_dict[city] = {'totale positivi': {}, 'isolamento': {}}
+            cases_dict[city]['totale positivi'][date] = row['totale positivi']
+            # isolamento was not given from the beginning
+            if 'isolamento' in df.columns:
+                cases_dict[city]['isolamento'][date] = int(row['isolamento'])
+
+    return cases_dict
+
+
+def generate_summary(cases_dict: dict) -> dict:
+    """
+    Given a dictionary containing the case data it returns a dictionary with the overall summary for each category
+    Args:
+        cases_dict (dict): the data
+
+    Returns:
+        A dictionary that contains the same categories as keys as the input and as values a dictionary date-value with
+        the overall sum of all the input values
+    """
+    summary = {}
+
+    for city, categories in cases_dict.items():
+        for category, data in categories.items():
+            for date, value in data.items():
+                # initialize the first one
+                if category not in summary:
+                    summary[category] = {}
+                summary[category][date] = value + summary[category].get(date, 0)
+
+    return summary
+
+
+def save_category_to_csv(case_dict: dict, category: str, filename: str):
+
+    d = {}
+    for city, categories in case_dict.items():
+        if 'date' not in d:
+            d['date'] = list(case_dict[city][category].keys())
+        d[city] = list(case_dict[city][category].values())
+
+    pd.DataFrame(d).to_csv(filename, index=False)
+
+
+def save_to_json(case_dict: dict, dates: List[str], filename: str):
+
+    with open(filename, 'w') as fp:
+        out = {'places': case_dict, 'dates': dates}
+        json.dump(out, fp, sort_keys=True, indent=4)
+
+
+def cases_sanity_check(case_dict: dict):
+    # check we have all the cities
+    assert len(case_dict.keys()) == 11
+
+    num_elem = -1
+
+    # check consistency
+    for city, data in case_dict.items():
+        # number of element for total positives must be the same (i.e. same number of days)
+        if num_elem == -1:
+            num_elem = len(data['totale positivi'].keys())
+        else:
+            assert len(data['totale positivi'].keys()) == num_elem
+
+        # totale positivi, is it a cumulative data?
+        days = list(data['totale positivi'].keys())
+        positive = data['totale positivi']
+        for idx, day in enumerate(days):
+            if idx > 0:
+                if positive[days[idx]] < positive[days[idx - 1]]:
+                    warnings.warn('decreasing in total positives for ' + city + ' on ' + days[idx] + ' (' + str(
+                        positive[days[idx]]) + ') and ' + days[idx - 1] + ' (' + str(positive[days[idx - 1]]) + ')',
+                                  Warning)
+
+
+if __name__ == '__main__':
+
+    parser = argparse.ArgumentParser(description='Generate json database file from raw data')
+    # general parameters
+    parser.add_argument('--baseDir', required=True, help='the folder containing the csv')
+    parser.add_argument('--jsonDir', required=True, help='the output folder where to save the json files')
+    parser.add_argument('--csvDir', required=True, help='the output folder where to save the csv files')
+
+    args = parser.parse_args()
+
+    # get all the files
+    files = get_all_cases(args.baseDir)
+    # read and generate dict database
+    cases = read_all_cases(files)
+    # add veneto summary
+    veneto = generate_summary(cases)
+    cases['Veneto'] = veneto
+
+    # print(cases.keys())
+    cases_sanity_check(cases)
+    # print(cases)
+
+    # save the csv files
+    for city_name, category_names in cases.items():
+        for category_name in list(category_names.keys()):
+            save_category_to_csv(cases, category=category_name, filename=os.path.join(args.csvDir, 'test_' + category_name + '.csv'))
+
+    # save json file
+    save_to_json(cases, dates=list(files.keys()), filename=os.path.join(args.jsonDir, 'cases.json'))
