@@ -1,0 +1,32 @@
+
+
+## Repository structure
+
+The repository is organized with the following folders:
+
+* `raw_data` contains all raw data extracted and manually pre-processed to generate the dataset. 
+  See the inner [README](raw_data/README.md) for more detail on the extraction process
+
+* `csv_data` contains the cvs files of the dataset
+
+* `json_data` contains the json representation of the dataset
+
+## Available data
+
+There are two major sources of data:
+
+* The daily positive persons and those in isolation (`cases`), broken down by city (actually, by city of residence, so there is a small amount of persons accounted from other cities outside the region)
+
+* The daily statistics for all the hospitals of the regions (`hospitals`). Those include:
+  * daily hospitalized persons in non critical conditions;
+  * daily persons in intensive care 
+  * number of people discharged since the beginning (cumulative info)
+  * number of deaths since the beginning (cumulative info)
+
+## Data source
+
+The data has been collected mostly from the daily reports by Regione Veneto that can be found on most local newspapers:
+
+* L'Arena [daily updates](https://www.larena.it/territori/citt%C3%A0/verona-81-nuovi-casi-e-17-morti-nelle-ultime-24-ore-1.7976616)
+
+* [Il Giornale di Vicenza](https://www.ilgiornaledivicenza.it/) 
