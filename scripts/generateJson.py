@@ -9,24 +9,49 @@ import json
 import warnings
 
 
+def get_all_files(base_dir: str, pattern: str) -> dict:
+    """
+
+    Args:
+        base_dir ():
+        pattern ():
+
+    Returns:
+
+    """
+    files_dict = {}
+    reg_compile = re.compile(pattern)
+    for dir_path, dir_names, filenames in os.walk(base_dir):
+        for filename in sorted(filenames):
+            res = reg_compile.match(filename)
+            if res:
+                files_dict[res.group(1)] = os.path.join(dir_path, filename)
+
+    return files_dict
+
+
 def get_all_cases(base_dir: str) -> dict:
     """
-    Get the list of all cases file 'casesYYYYMMDD.cvs'
+    Get the list of all case files 'casesYYYYMMDD.cvs'
     Args:
         base_dir (str): the folder where to look for the files.
 
     Returns:
         A dictionary where the key is the date in YYYYMMDD format and the value the filename
     """
-    cases_dict = {}
-    reg_compile = re.compile(r"cases(\d{8}).csv")
-    for dir_path, dir_names, filenames in os.walk(base_dir):
-        for filename in sorted(filenames):
-            res = reg_compile.match(filename)
-            if res:
-                cases_dict[res.group(1)] = os.path.join(dir_path, filename)
+    return get_all_files(base_dir, r"cases(\d{8}).csv")
 
-    return cases_dict
+
+def get_all_hospitals(base_dir: str) -> dict:
+    """
+    Get the list of all hospital files 'hospitalsYYYYMMDD.cvs'
+    Args:
+        base_dir (str): the folder where to look for the files.
+
+    Returns:
+        A dictionary where the key is the date in YYYYMMDD format and the value the filename
+    """
+    return get_all_files(base_dir, r"hospitals(\d{8}).csv")
 
 
 def read_all_cases(files_dict: dict) -> dict:
@@ -70,6 +95,45 @@ def read_all_cases(files_dict: dict) -> dict:
     return cases_dict
 
 
+def read_all_hospitals(files_dict: dict) -> dict:
+    hospital_dict = {}
+    for date, filename in files_dict.items():
+        print(date)
+        # load csv
+        df = pd.read_csv(filename)
+        df.fillna(value=0, inplace=True)
+        # for each row
+        for index, row in df.iterrows():
+            if not isinstance(row['struttura'], str):
+                raise TypeError('city must be a string in ' + filename)
+
+            # some of the entries have a \n
+            hospital = row['struttura'].replace('\n', ' ')
+            # some fixes beacause some entries have footnote symbols, remove them
+            hospital = hospital.replace(' °', '')
+            hospital = hospital.replace('^', '')
+            hospital = hospital.replace('  ', ' ')
+            # Uniform the data with "Ospedale <city>" instead of "Ospedale di <city>"
+            hospital = hospital.replace('Ospedale di ', 'Ospedale ')
+            # some specific inconsistencies
+            if hospital == 'Ospedale Sacro Cuore Don Calabria':
+                hospital = 'Ospedale Sacro Cuore Don Calabria-Negrar'
+            if hospital == 'Ospedale Villa Salus':
+                hospital = 'Ospedale Villa Salus-Mestre'
+            if hospital == 'ULSS 6- Osedale Camposampiero':
+                hospital = 'ULSS 6 - Ospedale Camposampiero'
+
+            # initialize
+            if hospital not in hospital_dict:
+                hospital_dict[hospital] = {'non critici': {}, 'terapia intensiva': {}, 'dimessi': {}, 'decessi': {}}
+            hospital_dict[hospital]['non critici'][date] = int(row['non critici'])
+            hospital_dict[hospital]['terapia intensiva'][date] = int(row['terapia intensiva'])
+            hospital_dict[hospital]['dimessi'][date] = int(row['dimessi'])
+            hospital_dict[hospital]['decessi'][date] = int(row['decessi'])
+
+    return hospital_dict
+
+
 def generate_summary(cases_dict: dict) -> dict:
     """
     Given a dictionary containing the case data it returns a dictionary with the overall summary for each category
@@ -93,13 +157,14 @@ def generate_summary(cases_dict: dict) -> dict:
     return summary
 
 
-def save_category_to_csv(case_dict: dict, category: str, filename: str):
+def save_category_to_csv(case_dict: dict, category: str, dates: List[str], filename: str):
 
-    d = {}
+    d = {'date': dates}
     for city, categories in case_dict.items():
-        if 'date' not in d:
-            d['date'] = list(case_dict[city][category].keys())
-        d[city] = list(case_dict[city][category].values())
+        # this is to assure that there is a number for each date, if it is not provided it is assumed 0
+        d[city] = []
+        for day in dates:
+            d[city].append(case_dict[city][category].get(day, 0))
 
     pd.DataFrame(d).to_csv(filename, index=False)
 
@@ -147,9 +212,9 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # get all the files
-    files = get_all_cases(args.baseDir)
+    files_cases = get_all_cases(args.baseDir)
     # read and generate dict database
-    cases = read_all_cases(files)
+    cases = read_all_cases(files_cases)
     # add veneto summary
     veneto = generate_summary(cases)
     cases['Veneto'] = veneto
@@ -161,7 +226,27 @@ if __name__ == '__main__':
     # save the csv files
     for city_name, category_names in cases.items():
         for category_name in list(category_names.keys()):
-            save_category_to_csv(cases, category=category_name, filename=os.path.join(args.csvDir, 'test_' + category_name + '.csv'))
+            save_category_to_csv(cases, dates=list(files_cases.keys()), category=category_name, filename=os.path.join(args.csvDir, 'cases_' + category_name + '.csv'))
 
     # save json file
-    save_to_json(cases, dates=list(files.keys()), filename=os.path.join(args.jsonDir, 'cases.json'))
+    save_to_json(cases, dates=list(files_cases.keys()), filename=os.path.join(args.jsonDir, 'cases.json'))
+
+    # Hospitals
+    files_hospitals = get_all_hospitals(args.baseDir)
+
+    hospitals = read_all_hospitals(files_hospitals)
+    # add veneto summary
+    veneto = generate_summary(hospitals)
+    hospitals['Veneto'] = veneto
+
+    # save json file
+    save_to_json(hospitals, dates=list(files_hospitals.keys()), filename=os.path.join(args.jsonDir, 'hospitals.json'))
+
+    # save the csv files
+    for hospital_name, category_names in hospitals.items():
+        for category_name in list(category_names.keys()):
+            save_category_to_csv(hospitals, dates=list(files_hospitals.keys()), category=category_name, filename=os.path.join(args.csvDir, 'hospitals_' + category_name + '.csv'))
+
+    print('\n'.join('{}'.format(l) for l in sorted(list(hospitals.keys()))))
+    print(len(list(hospitals.keys())))
+    print(hospitals)
