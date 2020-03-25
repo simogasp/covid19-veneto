@@ -1,0 +1,32 @@
+Residenza,Totale,Δ + casi
+Belluno,11,0
+Padova,138,+6)
+Rovigo,5,0
+Treviso,124,+14)
+Venezia,119,+19)
+Verona,60,+8)
+Vicenza,41,+4)
+Cluster residenti Comune di Vò*,84,0
+Lombardia,3,0
+Assegnazione in corso,13,+4)
+TOTALE REGIONE VENETO,598,+55)
+Struttura di ricovero,"degentipresenti conSARS-CoV-2",Δ casi,"di cui in TERAPIAINTENSIVA","dimessi dal21.2","deceduti conpositività perSARS-CoV-2** dal21.2",,
+"",,Totale,Δ,,Δ,,
+Azienda Ospedale Università Padova,42,+3),16,,22,2,
+"Azienda Ospedaliera UniversitariaIntegrata di Verona- Borgo Roma",12,,,,,,
+ULSS 1- Ospedale Belluno,3,+1),,,,,
+ULSS 2 - Ospedale Treviso,57,+8),4,+1),,8,
+ULSS 2 - Ospedale Conegliano,2,+2),2,+2),,,
+ULSS 2 - Ospedale Vittorio Veneto,1,+1),,,,,
+ULSS 2 - Ospedale Castelfranco,1,+1),,,,,
+ULSS 3 - Ospedale Mestre,23,,9,-1,1,3,+2)
+ULSS 3 - Ospedale Venezia,11,,4,,2,1,
+ULSS 3 - Ospedale Mirano,5,+2),3,+2),,,
+ULSS 3 - Ospedale Dolo,,,,,,,
+ULSS 5 - Ospedale Rovigo,5,+1),,,1,,
+ULSS 6 - Ospedale Schiavonia,0,,,,,1,
+ULSS 6 - Ospedale Piove di Sacco,3,+3),,,,,
+ULSS 7 - Ospedale di Santorso,6,,,,,,
+ULSS 8 - Ospedale Vicenza,10,+2),6,+1),3,,
+ULSS 9 - Ospedale Legnago,3,,2,,,,
+Ospedale Sacro Cuore Don Calabria,4,,,,,,

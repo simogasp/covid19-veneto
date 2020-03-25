@@ -1,0 +1,27 @@
+Residenza,Totale,Δ + casi
+Belluno,10,+4)
+Padova,118,+6)
+Rovigo,4,0
+Treviso,109,+1)
+Venezia,96,+10)
+Verona,50,+1)
+Vicenza,30,+5)
+Cluster residenti Comune di Vò*,84,0
+Lombardia,3,0
+Assegnazione in corso,7,-4
+TOTALE REGIONE VENETO,511,+23)
+Struttura di ricovero,"degentipresenti conSARS-CoV-2",Δ casi,"di cui in TERAPIAINTENSIVA","dimessi dal21.2","deceduti conpositività perSARS-CoV-2** dal21.2",,
+"",,Totale,Δ,,Δ,,
+Azienda Ospedale Università Padova,38,-1,16,+2),20,1,
+"Azienda Ospedaliera UniversitariaIntegrata di Verona- Borgo Roma",10,,,,,,
+ULSS 2 - Ospedale Treviso,49,+7),3,+1),,8,
+ULSS 3 - Ospedale Mestre,22,+4),9,+5),1,1,
+ULSS 3 - Ospedale Venezia,11,-2,4,+1),2,1,
+ULSS 3 - Ospedale Mirano,3,+2),1,+1),,,
+ULSS 3 - Ospedale Dolo,,,,,,,
+ULSS 5 - Ospedale Rovigo,4,,,,1,,
+ULSS 6 - Ospedale Schiavonia,0,,,,,1,
+ULSS 7 - Ospedale di Santorso,3,,,,,,
+ULSS 8 - Ospedale Vicenza,8,,4,,,,
+ULSS 9 - Ospedale Legnago,3,,2,+2),,,
+Ospedale Sacro Cuore Don Calabria,4,+1),,,,,
