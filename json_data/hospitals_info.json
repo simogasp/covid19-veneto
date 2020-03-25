@@ -1,0 +1,303 @@
+{
+    "Azienda Ospedale Universit\u00e0 Padova": {
+        "city": "Padova",
+        "latitude": "",
+        "longitude": "",
+        "province": "Padova",
+        "short name": "AOU Padova"
+    },
+    "Azienda Ospedale Universit\u00e0 Padova- Ospedale S. Antonio": {
+        "city": "Padova",
+        "latitude": "",
+        "longitude": "",
+        "province": "Padova",
+        "short name": "S. Antonio"
+    },
+    "Azienda Ospedaliera Universitaria Integrata di Verona - Borgo Roma": {
+        "city": "Verona",
+        "latitude": "45.403798",
+        "longitude": "10.992568",
+        "province": "Verona",
+        "short name": "Borgo Roma"
+    },
+    "Azienda Ospedaliera Universitaria Integrata di Verona - Borgo Trento": {
+        "city": "Verona",
+        "latitude": "45.452223",
+        "longitude": "10.985863",
+        "province": "Verona",
+        "short name": "Borgo Trento"
+    },
+    "IRCCS - IOV": {
+        "city": "Padova",
+        "latitude": "",
+        "longitude": "",
+        "province": "Padova",
+        "short name": "IOV"
+    },
+    "Ospedale P. Pederzoli-Peschiera": {
+        "city": "Peschiera",
+        "latitude": "",
+        "longitude": "",
+        "province": "Verona",
+        "short name": "Peschiera"
+    },
+    "Ospedale S. Camillo-Treviso": {
+        "city": "Treviso",
+        "latitude": "",
+        "longitude": "",
+        "province": "Treviso",
+        "short name": "S. Camillo"
+    },
+    "Ospedale Sacro Cuore Don Calabria-Negrar": {
+        "city": "Negrar",
+        "latitude": "",
+        "longitude": "",
+        "province": "Verona",
+        "short name": "Negrar"
+    },
+    "Ospedale Villa Salus-Mestre": {
+        "city": "Mestre",
+        "latitude": "",
+        "longitude": "",
+        "province": "Venezia",
+        "short name": "Villa Salus"
+    },
+    "ULSS 1 - Ospedale Agordo": {
+        "city": "Agordo",
+        "latitude": "",
+        "longitude": "",
+        "province": "Belluno",
+        "short name": "Agordo"
+    },
+    "ULSS 1 - Ospedale Belluno": {
+        "city": "Belluno",
+        "latitude": "",
+        "longitude": "",
+        "province": "Belluno",
+        "short name": "Belluno"
+    },
+    "ULSS 1 - Ospedale Feltre": {
+        "city": "Feltre",
+        "latitude": "",
+        "longitude": "",
+        "province": "Belluno",
+        "short name": "Feltre"
+    },
+    "ULSS 2 - Ospedale Castelfranco": {
+        "city": "Castelfranco Veneto",
+        "latitude": "",
+        "longitude": "",
+        "province": "Treviso",
+        "short name": "Castelfranco"
+    },
+    "ULSS 2 - Ospedale Conegliano": {
+        "city": "Conegliano",
+        "latitude": "",
+        "longitude": "",
+        "province": "Treviso",
+        "short name": "Conegliano"
+    },
+    "ULSS 2 - Ospedale Montebelluna": {
+        "city": "Montebelluna",
+        "latitude": "",
+        "longitude": "",
+        "province": "Treviso",
+        "short name": "Montebelluna"
+    },
+    "ULSS 2 - Ospedale Oderzo": {
+        "city": "Oderzo",
+        "latitude": "",
+        "longitude": "",
+        "province": "Treviso",
+        "short name": "Oderzo"
+    },
+    "ULSS 2 - Ospedale Treviso": {
+        "city": "Treviso",
+        "latitude": "",
+        "longitude": "",
+        "province": "Treviso",
+        "short name": "Treviso"
+    },
+    "ULSS 2 - Ospedale Vittorio Veneto": {
+        "city": "Vittorio Veneto",
+        "latitude": "",
+        "longitude": "",
+        "province": "Venezia",
+        "short name": "Vittorio Veneto"
+    },
+    "ULSS 3 - Ospedale Chioggia": {
+        "city": "Chioggia",
+        "latitude": "",
+        "longitude": "",
+        "province": "Venezia",
+        "short name": "Chioggia"
+    },
+    "ULSS 3 - Ospedale Dolo": {
+        "city": "Dolo",
+        "latitude": "",
+        "longitude": "",
+        "province": "Venezia",
+        "short name": "Dolo"
+    },
+    "ULSS 3 - Ospedale Mestre": {
+        "city": "Mestre",
+        "latitude": "",
+        "longitude": "",
+        "province": "Venezia",
+        "short name": "Mestre"
+    },
+    "ULSS 3 - Ospedale Mirano": {
+        "city": "Mirano",
+        "latitude": "",
+        "longitude": "",
+        "province": "Venezia",
+        "short name": "Mirano"
+    },
+    "ULSS 3 - Ospedale Venezia": {
+        "city": "Venezia",
+        "latitude": "",
+        "longitude": "",
+        "province": "Venezia",
+        "short name": "Venezia"
+    },
+    "ULSS 4 - Ospedale Jesolo": {
+        "city": "Jesolo",
+        "latitude": "",
+        "longitude": "",
+        "province": "Venezia",
+        "short name": "Jesolo"
+    },
+    "ULSS 4 - Ospedale San Dona' di Piave": {
+        "city": "San Dona' di Piave",
+        "latitude": "",
+        "longitude": "",
+        "province": "Venezia",
+        "short name": "San Dona'"
+    },
+    "ULSS 5 - Ospedale Adria": {
+        "city": "Adria",
+        "latitude": "",
+        "longitude": "",
+        "province": "Rovigo",
+        "short name": "Adria"
+    },
+    "ULSS 5 - Ospedale Rovigo": {
+        "city": "Rovigo",
+        "latitude": "",
+        "longitude": "",
+        "province": "Rovigo",
+        "short name": "Rovigo"
+    },
+    "ULSS 5 - Ospedale Trecenta": {
+        "city": "Trecenta",
+        "latitude": "",
+        "longitude": "",
+        "province": "Rovigo",
+        "short name": "Trecenta"
+    },
+    "ULSS 6 - Ospedale Camposampiero": {
+        "city": "Camposampiero",
+        "latitude": "",
+        "longitude": "",
+        "province": "Padova",
+        "short name": "Camposampiero"
+    },
+    "ULSS 6 - Ospedale Cittadella": {
+        "city": "Cittadella",
+        "latitude": "",
+        "longitude": "",
+        "province": "Padova",
+        "short name": "Cittadella"
+    },
+    "ULSS 6 - Ospedale Piove di Sacco": {
+        "city": "Piove di Sacco",
+        "latitude": "",
+        "longitude": "",
+        "province": "Padova",
+        "short name": "Piove di Sacco"
+    },
+    "ULSS 6 - Ospedale Schiavonia": {
+        "city": "Schiavonia",
+        "latitude": "",
+        "longitude": "",
+        "province": "Padova",
+        "short name": "Schiavonia"
+    },
+    "ULSS 7 - Ospedale Asiago": {
+        "city": "Asiago",
+        "latitude": "",
+        "longitude": "",
+        "province": "Vicenza",
+        "short name": "Asiago"
+    },
+    "ULSS 7 - Ospedale Bassano": {
+        "city": "Bassano del Grappa",
+        "latitude": "",
+        "longitude": "",
+        "province": "Vicenza",
+        "short name": "Bassano"
+    },
+    "ULSS 7 - Ospedale Santorso": {
+        "city": "",
+        "latitude": "",
+        "longitude": "",
+        "province": "Vicenza",
+        "short name": "Santorso"
+    },
+    "ULSS 8 - Ospedale Arzignano": {
+        "city": "Arzignano",
+        "latitude": "",
+        "longitude": "",
+        "province": "Vicenza",
+        "short name": "Arzignano"
+    },
+    "ULSS 8 - Ospedale Lonigo": {
+        "city": "Lonigo",
+        "latitude": "",
+        "longitude": "",
+        "province": "Vicenza",
+        "short name": "Lonigo"
+    },
+    "ULSS 8 - Ospedale Noventa Vicentina": {
+        "city": "Noventa Vicentina",
+        "latitude": "",
+        "longitude": "",
+        "province": "Vicenza",
+        "short name": "Noventa Vicentina"
+    },
+    "ULSS 8 - Ospedale Valdagno": {
+        "city": "Valdagno",
+        "latitude": "",
+        "longitude": "",
+        "province": "Vicenza",
+        "short name": "Valdagno"
+    },
+    "ULSS 8 - Ospedale Vicenza": {
+        "city": "Vicenza",
+        "latitude": "",
+        "longitude": "",
+        "province": "Vicenza",
+        "short name": "Vicenza"
+    },
+    "ULSS 9 - Ospedale Legnago": {
+        "city": "Legnago",
+        "latitude": "",
+        "longitude": "",
+        "province": "Verona",
+        "short name": "Legnago"
+    },
+    "ULSS 9 - Ospedale San Bonifacio": {
+        "city": "San Bonifacio",
+        "latitude": "45.391965",
+        "longitude": "11.279581",
+        "province": "Verona",
+        "short name": "San Bonifacio"
+    },
+    "ULSS 9 - Ospedale Villafranca": {
+        "city": "Villafranca di Verona",
+        "latitude": "45.347719",
+        "longitude": "10.838999",
+        "province": "Verona",
+        "short name": "Villafranca"
+    }
+}
