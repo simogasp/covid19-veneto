@@ -169,11 +169,10 @@ def save_category_to_csv(case_dict: dict, category: str, dates: List[str], filen
     pd.DataFrame(d).to_csv(filename, index=False)
 
 
-def save_to_json(case_dict: dict, dates: List[str], filename: str):
+def save_to_json(case_dict: dict, filename: str):
 
     with open(filename, 'w') as fp:
-        out = {'places': case_dict, 'dates': dates}
-        json.dump(out, fp, sort_keys=True, indent=4)
+        json.dump(case_dict, fp, sort_keys=True, indent=4)
 
 
 def cases_sanity_check(case_dict: dict):
@@ -234,7 +233,7 @@ if __name__ == '__main__':
             save_category_to_csv(cases, dates=list(files_cases.keys()), category=category_name, filename=os.path.join(args.csvDir, 'cases_' + category_name + '.csv'))
 
     # save json file
-    save_to_json(cases, dates=list(files_cases.keys()), filename=os.path.join(args.jsonDir, 'cases.json'))
+    save_to_json({'places': cases, 'dates': list(files_cases.keys())}, filename=os.path.join(args.jsonDir, 'cases.json'))
 
     # Hospitals
     files_hospitals = get_all_hospitals(args.baseDir)
@@ -251,7 +250,7 @@ if __name__ == '__main__':
     hospitals_sanity_check(hospitals)
 
     # save json file
-    save_to_json(hospitals, dates=list(files_hospitals.keys()), filename=os.path.join(args.jsonDir, 'hospitals.json'))
+    save_to_json({'hospitals': hospitals, 'dates': list(files_hospitals.keys())}, filename=os.path.join(args.jsonDir, 'hospitals.json'))
 
     # save the csv files
     for hospital_name, category_names in hospitals.items():
