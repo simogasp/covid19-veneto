@@ -109,7 +109,7 @@ def read_all_hospitals(files_dict: dict) -> dict:
 
             # some of the entries have a \n
             hospital = row['struttura'].replace('\n', ' ')
-            # some fixes beacause some entries have footnote symbols, remove them
+            # some fixes because some entries have footnote symbols, remove them
             hospital = hospital.replace(' °', '')
             hospital = hospital.replace('^', '')
             hospital = hospital.replace('  ', ' ')
@@ -201,6 +201,11 @@ def cases_sanity_check(case_dict: dict):
                                   Warning)
 
 
+def hospitals_sanity_check(case_dict: dict):
+    # check we have all the hospitals
+    assert len(case_dict.keys()) == 44
+
+
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='Generate json database file from raw data')
@@ -239,6 +244,12 @@ if __name__ == '__main__':
     veneto = generate_summary(hospitals)
     hospitals['Veneto'] = veneto
 
+    print('\n'.join('{}'.format(l) for l in sorted(list(hospitals.keys()))))
+    print(len(list(hospitals.keys())))
+    print(hospitals)
+
+    hospitals_sanity_check(hospitals)
+
     # save json file
     save_to_json(hospitals, dates=list(files_hospitals.keys()), filename=os.path.join(args.jsonDir, 'hospitals.json'))
 
@@ -247,6 +258,4 @@ if __name__ == '__main__':
         for category_name in list(category_names.keys()):
             save_category_to_csv(hospitals, dates=list(files_hospitals.keys()), category=category_name, filename=os.path.join(args.csvDir, 'hospitals_' + category_name + '.csv'))
 
-    print('\n'.join('{}'.format(l) for l in sorted(list(hospitals.keys()))))
-    print(len(list(hospitals.keys())))
-    print(hospitals)
+
