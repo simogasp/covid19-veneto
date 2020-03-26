@@ -122,6 +122,8 @@ def read_all_hospitals(files_dict: dict) -> dict:
                 hospital = 'Ospedale Villa Salus-Mestre'
             if hospital == 'ULSS 6- Osedale Camposampiero':
                 hospital = 'ULSS 6 - Ospedale Camposampiero'
+            if hospital == 'ULSS 9- Ospedale Marzana':
+                hospital = 'ULSS 9 - Ospedale Marzana'
 
             # initialize
             if hospital not in hospital_dict:
@@ -202,7 +204,7 @@ def cases_sanity_check(case_dict: dict):
 
 def hospitals_sanity_check(case_dict: dict):
     # check we have all the hospitals
-    assert len(case_dict.keys()) == 44
+    assert len(case_dict.keys()) == 45
 
 
 if __name__ == '__main__':
