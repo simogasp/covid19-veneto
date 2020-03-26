@@ -166,7 +166,7 @@ def save_category_to_csv(case_dict: dict, category: str, dates: List[str], filen
         for day in dates:
             d[city].append(case_dict[city][category].get(day, 0))
 
-    pd.DataFrame(d).to_csv(filename, index=False)
+    pd.DataFrame(d).to_csv(filename.replace(' ', '_'), index=False)
 
 
 def save_to_json(case_dict: dict, filename: str):
