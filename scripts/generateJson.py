@@ -162,7 +162,7 @@ def generate_summary(cases_dict: dict) -> dict:
 def save_category_to_csv(case_dict: dict, category: str, dates: List[str], filename: str):
 
     d = {'date': dates}
-    for city, categories in case_dict.items():
+    for city in sorted(case_dict.keys()):
         # this is to assure that there is a number for each date, if it is not provided it is assumed 0
         d[city] = []
         for day in dates:
