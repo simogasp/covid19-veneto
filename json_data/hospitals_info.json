@@ -8,8 +8,8 @@
     },
     "Azienda Ospedale Universit\u00e0 Padova- Ospedale S. Antonio": {
         "city": "Padova",
-        "latitude": "",
-        "longitude": "",
+        "latitude": "45.392907",
+        "longitude": "11.892008",
         "province": "Padova",
         "short name": "S. Antonio"
     },
@@ -238,7 +238,7 @@
         "short name": "Bassano"
     },
     "ULSS 7 - Ospedale Santorso": {
-        "city": "",
+        "city": "Santorso",
         "latitude": "",
         "longitude": "",
         "province": "Vicenza",
