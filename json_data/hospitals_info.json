@@ -27,6 +27,20 @@
         "province": "Verona",
         "short name": "Borgo Trento"
     },
+    "Casa di Cura Villa Maria - Padova": {
+        "city": "Padova",
+        "latitude": "45.410186",
+        "longitude": "11.860789",
+        "province": "Padova",
+        "short name": "Villa Maria"
+    },
+    "Casa di Cura Villa Maria ODC - Padova": {
+        "city": "Padova",
+        "latitude": "45.410186",
+        "longitude": "11.860789",
+        "province": "Padova",
+        "short name": "Villa Maria ODC"
+    },
     "IRCCS - IOV": {
         "city": "Padova",
         "latitude": "",
@@ -75,6 +89,20 @@
         "longitude": "",
         "province": "Belluno",
         "short name": "Belluno"
+    },
+    "ULSS 1 - Ospedale Comunit\u00e0 Agordo": {
+        "city": "Agordo",
+        "latitude": "46.283593",
+        "longitude": "12.038801",
+        "province": "Belluno",
+        "short name": "Agordo ODC"
+    },
+    "ULSS 1 - Ospedale Comunit\u00e0 Belluno": {
+        "city": "",
+        "latitude": "",
+        "longitude": "",
+        "province": "Belluno",
+        "short name": "Belluno ODC"
     },
     "ULSS 1 - Ospedale Feltre": {
         "city": "Feltre",
@@ -285,6 +313,13 @@
         "longitude": "",
         "province": "Verona",
         "short name": "Legnago"
+    },
+    "ULSS 9 - Ospedale Marzana": {
+        "city": "",
+        "latitude": "",
+        "longitude": "",
+        "province": "",
+        "short name": ""
     },
     "ULSS 9 - Ospedale San Bonifacio": {
         "city": "San Bonifacio",

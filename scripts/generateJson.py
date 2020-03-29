@@ -7,6 +7,7 @@ import argparse
 import re
 import json
 import warnings
+from fuzzywuzzy import process
 
 
 def get_all_files(base_dir: str, pattern: str) -> dict:
@@ -124,6 +125,8 @@ def read_all_hospitals(files_dict: dict) -> dict:
                 hospital = 'ULSS 6 - Ospedale Camposampiero'
             if hospital == 'ULSS 9- Ospedale Marzana':
                 hospital = 'ULSS 9 - Ospedale Marzana'
+            if hospital == 'Ospedale comunità Villa Maria - Padova':
+                hospital = 'Casa di Cura Villa Maria ODC - Padova'
 
             # initialize
             if hospital not in hospital_dict:
@@ -202,9 +205,21 @@ def cases_sanity_check(case_dict: dict):
                                   Warning)
 
 
-def hospitals_sanity_check(case_dict: dict):
+def hospitals_sanity_check(case_dict: dict, hospital_info: dict):
     # check we have all the hospitals
-    assert len(case_dict.keys()) == 45
+    if len(case_dict.keys()) != len(hospital_info.keys()):
+        for name in case_dict.keys():
+            if name not in hospital_info and name != 'Veneto':
+                warnings.warn(name + ' is not in the database', Warning)
+                print(name + ' is not in the database. Add it to the db?')
+                ratios = process.extract(name, list(hospital_info.keys()))
+                threshold = 70
+                print('Similar entries:')
+                for idx, element in enumerate(ratios):
+                    print('{}) {} score:{}'.format(idx, element[0], element[1]))
+                ans = input('Add to the db? (y/n)')
+                if ans == 'y':
+                    hospital_info[name] = {'short name': '', 'city': '', 'province': '', 'latitude': '', 'longitude': ''}
 
 
 if __name__ == '__main__':
@@ -214,8 +229,13 @@ if __name__ == '__main__':
     parser.add_argument('--baseDir', required=True, help='the folder containing the csv')
     parser.add_argument('--jsonDir', required=True, help='the output folder where to save the json files')
     parser.add_argument('--csvDir', required=True, help='the output folder where to save the csv files')
+    parser.add_argument('--hospitalsInfo', required=True, help='the file containing the hospital general data')
 
     args = parser.parse_args()
+
+    # load the database of hospitals
+    with open(args.hospitalsInfo) as json_file:
+        hospitals_info = json.load(json_file)
 
     # get all the files
     files_cases = get_all_cases(args.baseDir)
@@ -249,7 +269,7 @@ if __name__ == '__main__':
     print(len(list(hospitals.keys())))
     print(hospitals)
 
-    hospitals_sanity_check(hospitals)
+    hospitals_sanity_check(hospitals, hospitals_info)
 
     # save json file
     save_to_json({'hospitals': hospitals, 'dates': list(files_hospitals.keys())}, filename=os.path.join(args.jsonDir, 'hospitals.json'))
@@ -259,4 +279,8 @@ if __name__ == '__main__':
         for category_name in list(category_names.keys()):
             save_category_to_csv(hospitals, dates=list(files_hospitals.keys()), category=category_name, filename=os.path.join(args.csvDir, 'hospitals_' + category_name + '.csv'))
 
-
+    # hospitals_info = {}
+    # for hospital_name, category_names in hospitals.items():
+    #     hospitals_info[hospital_name] = {'short name': '', 'city': '', 'province': '', 'latitude': '', 'longitude': ''}
+    #
+    save_to_json(hospitals_info, args.hospitalsInfo)

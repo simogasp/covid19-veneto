@@ -386,18 +386,22 @@
         },
         "Casa di Cura Villa Maria ODC - Padova": {
             "decessi": {
+                "20200327": 0,
                 "20200328": 0,
                 "20200329": 0
             },
             "dimessi": {
+                "20200327": 0,
                 "20200328": 0,
                 "20200329": 0
             },
             "non critici": {
+                "20200327": 2,
                 "20200328": 1,
                 "20200329": 1
             },
             "terapia intensiva": {
+                "20200327": 0,
                 "20200328": 0,
                 "20200329": 0
             }
@@ -714,20 +718,6 @@
                 "20200327": 0,
                 "20200328": 0,
                 "20200329": 0
-            }
-        },
-        "Ospedale comunit\u00e0 Villa Maria - Padova": {
-            "decessi": {
-                "20200327": 0
-            },
-            "dimessi": {
-                "20200327": 0
-            },
-            "non critici": {
-                "20200327": 2
-            },
-            "terapia intensiva": {
-                "20200327": 0
             }
         },
         "ULSS 1 - Ospedale Agordo": {
