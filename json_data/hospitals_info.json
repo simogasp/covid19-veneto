@@ -27,6 +27,13 @@
         "province": "Verona",
         "short name": "Borgo Trento"
     },
+    "Casa di Cura Rizzola": {
+        "city": "San Donà di Piave",
+        "latitude": "45.632699",
+        "longitude": "12.563225",
+        "province": "Venice",
+        "short name": "Rizzola"
+    },
     "Casa di Cura Villa Maria - Padova": {
         "city": "Padova",
         "latitude": "45.410186",
