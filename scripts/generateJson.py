@@ -152,10 +152,29 @@ def generate_summary(cases_dict: dict) -> dict:
     return summary
 
 
+def generate_summary_by_province(hospital_dict: dict, hospital_info: dict) -> dict:
+
+    summary = {}
+
+    for hospital, categories in hospital_dict.items():
+        province = hospital_info[hospital]['province']
+        if province not in summary:
+            summary[province] = {}
+        for category, data in categories.items():
+            if category not in summary[province]:
+                summary[province][category] = {}
+            for date, value in data.items():
+                summary[province][category][date] = value + summary[province][category].get(date, 0)
+
+    return summary
+
+
 def save_category_to_csv(case_dict: dict, category: str, dates: List[str], filename: str):
 
     d = {'date': dates}
     for city in sorted(case_dict.keys()):
+        if category not in case_dict[city]:
+            continue
         # this is to assure that there is a number for each date, if it is not provided it is assumed 0
         d[city] = []
         for day in dates:
@@ -237,30 +256,12 @@ if __name__ == '__main__':
     # load the database of hospitals
     exceptions = load_dict_from_json(args.exceptions)
 
-    # get all the files
-    files_cases = get_all_cases(args.baseDir)
-    # read and generate dict database
-    cases = read_all_cases(files_cases, exceptions['provinces'])
-    # add veneto summary
-    veneto = generate_summary(cases)
-    cases['Veneto'] = veneto
-
-    # print(cases.keys())
-    cases_sanity_check(cases)
-    # print(cases)
-
-    # save the csv files
-    for city_name, category_names in cases.items():
-        for category_name in list(category_names.keys()):
-            save_category_to_csv(cases, dates=list(files_cases.keys()), category=category_name, filename=os.path.join(args.csvDir, 'provinces_' + category_name + '.csv'))
-
-    # save json file
-    save_to_json({'places': cases, 'dates': list(files_cases.keys())}, filename=os.path.join(args.jsonDir, 'provinces.json'))
-
     # Hospitals
     files_hospitals = get_all_hospitals(args.baseDir)
 
     hospitals = read_all_hospitals(files_hospitals, exceptions['hospitals'])
+
+    summary_by_province = generate_summary_by_province(hospitals, hospitals_info)
 
     # add veneto summary
     veneto = generate_summary(hospitals)
@@ -279,6 +280,32 @@ if __name__ == '__main__':
     for hospital_name, category_names in hospitals.items():
         for category_name in list(category_names.keys()):
             save_category_to_csv(hospitals, dates=list(files_hospitals.keys()), category=category_name, filename=os.path.join(args.csvDir, 'hospitals_' + category_name + '.csv'))
+
+    # provinces
+    # get all the files
+    files_cases = get_all_cases(args.baseDir)
+    # read and generate dict database
+    cases = read_all_cases(files_cases, exceptions['provinces'])
+
+    # add the summary for other categories obtained from the hospitals
+    for city, data in summary_by_province.items():
+        cases[city].update(data)
+
+    # add veneto summary
+    veneto = generate_summary(cases)
+    cases['Veneto'] = veneto
+
+    # print(cases.keys())
+    cases_sanity_check(cases)
+    # print(cases)
+
+    # save the csv files
+    for city_name, category_names in cases.items():
+        for category_name in list(category_names.keys()):
+            save_category_to_csv(cases, dates=list(files_cases.keys()), category=category_name, filename=os.path.join(args.csvDir, 'provinces_' + category_name + '.csv'))
+
+    # save json file
+    save_to_json({'places': cases, 'dates': list(files_cases.keys())}, filename=os.path.join(args.jsonDir, 'provinces.json'))
 
     # hospitals_info = {}
     # for hospital_name, category_names in hospitals.items():
