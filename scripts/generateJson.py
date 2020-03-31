@@ -55,11 +55,12 @@ def get_all_hospitals(base_dir: str) -> dict:
     return get_all_files(base_dir, r"hospitals(\d{8}).csv")
 
 
-def read_all_cases(files_dict: dict) -> dict:
+def read_all_cases(files_dict: dict, exceptions: dict) -> dict:
     """
     Given the list of case files, read all the file and populate a dictionary with the relevant data
     Args:
         files_dict (dict): the key is the data, the value the filename (see :py:func: `get_all_cases()`)
+        exceptions (dict): a dictionary with exception to apply when reading the data, the key is the raw data and the value is the replacement
 
     Returns:
         A dictionary containing all the data.
@@ -79,12 +80,9 @@ def read_all_cases(files_dict: dict) -> dict:
             city = row['residenza']
             if not isinstance(city, str):
                 raise TypeError('city must be a string in ' + filename)
-            # at the beginning Lombardia was counted then i guess it was merged in a more general category
-            if city == 'Lombardia':
-                city = 'Domicilio fuori Veneto'
-            # I'm assuming that Padova always was without the Vo' cluster
-            if city == "Padova (escluso domiciliati Vo')":
-                city = 'Padova'
+            if city in exceptions:
+                city = exceptions[city]
+
             # initialize
             if city not in cases_dict:
                 cases_dict[city] = {'totale positivi': {}, 'isolamento': {}}
@@ -96,7 +94,7 @@ def read_all_cases(files_dict: dict) -> dict:
     return cases_dict
 
 
-def read_all_hospitals(files_dict: dict) -> dict:
+def read_all_hospitals(files_dict: dict, exceptions: dict) -> dict:
     hospital_dict = {}
     for date, filename in files_dict.items():
         print(date)
@@ -117,16 +115,8 @@ def read_all_hospitals(files_dict: dict) -> dict:
             # Uniform the data with "Ospedale <city>" instead of "Ospedale di <city>"
             hospital = hospital.replace('Ospedale di ', 'Ospedale ')
             # some specific inconsistencies
-            if hospital == 'Ospedale Sacro Cuore Don Calabria':
-                hospital = 'Ospedale Sacro Cuore Don Calabria-Negrar'
-            if hospital == 'Ospedale Villa Salus':
-                hospital = 'Ospedale Villa Salus-Mestre'
-            if hospital == 'ULSS 6- Osedale Camposampiero':
-                hospital = 'ULSS 6 - Ospedale Camposampiero'
-            if hospital == 'ULSS 9- Ospedale Marzana':
-                hospital = 'ULSS 9 - Ospedale Marzana'
-            if hospital == 'Ospedale comunità Villa Maria - Padova':
-                hospital = 'Casa di Cura Villa Maria ODC - Padova'
+            if hospital in exceptions:
+                hospital = exceptions[hospital]
 
             # initialize
             if hospital not in hospital_dict:
@@ -222,6 +212,12 @@ def hospitals_sanity_check(case_dict: dict, hospital_info: dict):
                     hospital_info[name] = {'short name': '', 'city': '', 'province': '', 'latitude': '', 'longitude': ''}
 
 
+def load_dict_from_json(filename: str) -> dict:
+    with open(filename) as json_file:
+        data = json.load(json_file)
+        return data
+
+
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='Generate json database file from raw data')
@@ -230,17 +226,21 @@ if __name__ == '__main__':
     parser.add_argument('--jsonDir', required=True, help='the output folder where to save the json files')
     parser.add_argument('--csvDir', required=True, help='the output folder where to save the csv files')
     parser.add_argument('--hospitalsInfo', required=True, help='the file containing the hospital general data')
+    parser.add_argument('--exceptions', required=True, help='the file containing the exceptions to apply when reading '
+                                                            'the data')
 
     args = parser.parse_args()
 
     # load the database of hospitals
-    with open(args.hospitalsInfo) as json_file:
-        hospitals_info = json.load(json_file)
+    hospitals_info = load_dict_from_json(args.hospitalsInfo)
+
+    # load the database of hospitals
+    exceptions = load_dict_from_json(args.exceptions)
 
     # get all the files
     files_cases = get_all_cases(args.baseDir)
     # read and generate dict database
-    cases = read_all_cases(files_cases)
+    cases = read_all_cases(files_cases, exceptions['provinces'])
     # add veneto summary
     veneto = generate_summary(cases)
     cases['Veneto'] = veneto
@@ -260,7 +260,8 @@ if __name__ == '__main__':
     # Hospitals
     files_hospitals = get_all_hospitals(args.baseDir)
 
-    hospitals = read_all_hospitals(files_hospitals)
+    hospitals = read_all_hospitals(files_hospitals, exceptions['hospitals'])
+
     # add veneto summary
     veneto = generate_summary(hospitals)
     hospitals['Veneto'] = veneto

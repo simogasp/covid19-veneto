@@ -1,0 +1,15 @@
+{
+  "hospitals": {
+    "Ospedale Sacro Cuore Don Calabria" : "Ospedale Sacro Cuore Don Calabria-Negrar",
+    "Ospedale Villa Salus": "Ospedale Villa Salus-Mestre",
+    "ULSS 6- Osedale Camposampiero": "ULSS 6 - Ospedale Camposampiero",
+    "ULSS 9- Ospedale Marzana": "ULSS 9 - Ospedale Marzana",
+    "Ospedale comunità Villa Maria - Padova": "Casa di Cura Villa Maria ODC - Padova",
+    "Casa di Cura Villa Maria OdC - Padova": "Casa di Cura Villa Maria ODC - Padova"
+  },
+
+  "provinces": {
+    "Lombardia": "Domicilio fuori Veneto",
+    "Padova (escluso domiciliati Vo')": "Padova"
+  }
+}
