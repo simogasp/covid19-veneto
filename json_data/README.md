@@ -22,12 +22,21 @@ The structure of the json is as follows:
             "isolamento" : {"20200306": 2,  "20200306": 3, ...}
             # positives, a dict with date as key and the daily number of positive persons
             "totale positivi" : {"20200306": 45,  "20200306": 76, ...}
+            # deaths, a dict with date as key and the cumulative number of death patients
+            "decessi" : {"20200306": 2,  "20200306": 3, ...}
+            # discharged, a dict with date as key and the cumulative number of discharged patients
+            "dimessi" : {"20200306": 45,  "20200306": 76, ...}
+            # hospitalized people in non critical conditions, a dict with date as key and the daily number of people 
+            "non critici" : {"20200306": 2,  "20200306": 3, ...}
+            # patients in intensive care, a dict with date as key and the daily number patients in intensive care
+            "terapia intensiva" : {"20200306": 45,  "20200306": 76, ...}
         } 
 
         "city2" : 
         {
             "isolamento" : {"20200306": 0,  "20200306": 12, ...}
             "totale positivi" : {"20200306": 56,  "20200306": 132, ...}
+            ...
         }     
    
     } 
@@ -69,5 +78,28 @@ The structure of the hospital data is fairly similar:
         }     
    
     } 
+}
+```
+
+## General information about the hospitals
+
+The file `hospitals_info.json` contains general information about the hospitals, like the GPS coordinates, the city etc.
+The dictionary has the following structure:
+
+```json
+{
+    # full name of the hospital as extracted from raw data
+    "Azienda Ospedale Universit\u00e0 Padova": {
+        # the city/town where the hospital is  
+        "city": "Padova",
+        # GPS coordinates
+        "latitude": "45.404039",
+        "longitude": "11.888226",
+        # province of the city/town
+        "province": "Padova",
+        # shorter name to ID the hospital
+        "short name": "AOU Padova"
+    },
+    ...
 }
 ```
