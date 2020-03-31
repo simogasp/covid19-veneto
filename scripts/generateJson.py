@@ -241,7 +241,7 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='Generate json database file from raw data')
     # general parameters
-    parser.add_argument('--baseDir', required=True, help='the folder containing the csv')
+    parser.add_argument('--rawDir', required=True, help='the folder containing the csv')
     parser.add_argument('--jsonDir', required=True, help='the output folder where to save the json files')
     parser.add_argument('--csvDir', required=True, help='the output folder where to save the csv files')
     parser.add_argument('--hospitalsInfo', required=True, help='the file containing the hospital general data')
@@ -257,7 +257,7 @@ if __name__ == '__main__':
     exceptions = load_dict_from_json(args.exceptions)
 
     # Hospitals
-    files_hospitals = get_all_hospitals(args.baseDir)
+    files_hospitals = get_all_hospitals(args.rawDir)
 
     hospitals = read_all_hospitals(files_hospitals, exceptions['hospitals'])
 
@@ -283,7 +283,7 @@ if __name__ == '__main__':
 
     # provinces
     # get all the files
-    files_cases = get_all_cases(args.baseDir)
+    files_cases = get_all_cases(args.rawDir)
     # read and generate dict database
     cases = read_all_cases(files_cases, exceptions['provinces'])
 
