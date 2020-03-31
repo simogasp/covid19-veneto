@@ -322,11 +322,11 @@
         "short name": "Legnago"
     },
     "ULSS 9 - Ospedale Marzana": {
-        "city": "",
-        "latitude": "",
-        "longitude": "",
-        "province": "",
-        "short name": ""
+        "city": "Marzana",
+        "latitude": "45.499975",
+        "longitude": "11.016428",
+        "province": "Verona",
+        "short name": "Marzana"
     },
     "ULSS 9 - Ospedale San Bonifacio": {
         "city": "San Bonifacio",
