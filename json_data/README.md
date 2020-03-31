@@ -7,7 +7,7 @@ The data is a "dump" of python dictionary that collects the data with a similar 
 This contains the daily number of people that are positive and those that are in isolation.
 The structure of the json is as follows:
 
-```json
+```yaml
 {
     # the list of dates that has been collected
     "dates" : ["20200306",  "20200306", ...]
@@ -47,7 +47,7 @@ The structure of the json is as follows:
 
 The structure of the hospital data is fairly similar:
 
-```json
+```yaml
 {
     # the list of dates that has been collected
     "dates" : ["20200306",  "20200306", ...]
@@ -86,7 +86,7 @@ The structure of the hospital data is fairly similar:
 The file `hospitals_info.json` contains general information about the hospitals, like the GPS coordinates, the city etc.
 The dictionary has the following structure:
 
-```json
+```yaml
 {
     # full name of the hospital as extracted from raw data
     "Azienda Ospedale Universit\u00e0 Padova": {
