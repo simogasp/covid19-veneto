@@ -252,10 +252,10 @@ if __name__ == '__main__':
     # save the csv files
     for city_name, category_names in cases.items():
         for category_name in list(category_names.keys()):
-            save_category_to_csv(cases, dates=list(files_cases.keys()), category=category_name, filename=os.path.join(args.csvDir, 'cases_' + category_name + '.csv'))
+            save_category_to_csv(cases, dates=list(files_cases.keys()), category=category_name, filename=os.path.join(args.csvDir, 'provinces_' + category_name + '.csv'))
 
     # save json file
-    save_to_json({'places': cases, 'dates': list(files_cases.keys())}, filename=os.path.join(args.jsonDir, 'cases.json'))
+    save_to_json({'places': cases, 'dates': list(files_cases.keys())}, filename=os.path.join(args.jsonDir, 'provinces.json'))
 
     # Hospitals
     files_hospitals = get_all_hospitals(args.baseDir)

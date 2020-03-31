@@ -1,8 +1,8 @@
 # Json data
 
-The data is a "dump" of python dictionary that collects the data with a similar structure both for the `cases` and the `hospitals`
+The data is a "dump" of python dictionary that collects the data with a similar structure both for the `provinces` and the `hospitals`
 
-## Cases
+## Provinces
 
 This contains the daily number of people that are positive and those that are in isolation.
 The structure of the json is as follows:

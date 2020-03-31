@@ -2,7 +2,7 @@
 
 This directory contains the raw data used to extract information.
 
-The main source are the pdf files released by the Veneto Region everyday in the afternoon (at around 17:00 CET).
+The main source are the pdf files released by Regione Veneto everyday in the afternoon (at around 17:00 CET).
 Note that there are usually two daily releases, in the morning and in the afternoon. 
 Here, unless otherwise specified, the information are always based on the afternoon briefing.
 
