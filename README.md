@@ -15,7 +15,7 @@ The repository is organized with the following folders:
 
 There are two major sources of data:
 
-* The daily positive persons and those in isolation (`cases`), broken down by city (actually, by city of residence, so there is a small amount of persons accounted from other cities outside the region)
+* The daily positive persons and those in isolation (`provinces`), broken down by city (actually, by city of residence, so there is a small amount of persons accounted from other cities outside the region)
 
 * The daily statistics for all the hospitals of the regions (`hospitals`). Those include:
   * daily hospitalized persons in non critical conditions;
