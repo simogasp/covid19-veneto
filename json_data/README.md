@@ -55,7 +55,7 @@ The structure of the hospital data is fairly similar:
     # this contains the data for all hospitals
     "hospitals" : 
     {
-        # name of the hospital
+        # full name of the hospital as extracted from raw data
         "hospital1" : 
         {
             # deaths, a dict with date as key and the cumulative number of death patients
