@@ -270,6 +270,7 @@ if __name__ == '__main__':
     files_hospitals = get_all_hospitals(args.rawDir)
 
     hospitals = read_all_hospitals(files_hospitals, exceptions['hospitals'])
+    hospitals_sanity_check(hospitals, hospitals_info)
 
     summary_by_province = generate_summary_by_province(hospitals, hospitals_info)
 
@@ -280,8 +281,6 @@ if __name__ == '__main__':
     print('\n'.join('{}'.format(l) for l in sorted(list(hospitals.keys()))))
     print(len(list(hospitals.keys())))
     print(hospitals)
-
-    hospitals_sanity_check(hospitals, hospitals_info)
 
     # save json file
     save_to_json({'hospitals': hospitals, 'dates': list(files_hospitals.keys())}, filename=os.path.join(args.jsonDir, 'hospitals.json'))
