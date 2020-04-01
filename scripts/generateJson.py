@@ -79,17 +79,27 @@ def read_all_cases(files_dict: dict, exceptions: dict) -> dict:
             # the residence is the key
             city = row['residenza']
             if not isinstance(city, str):
-                raise TypeError('city must be a string in ' + filename)
+                raise TypeError('city ' + str(city) + ' must be a string in ' + filename)
             if city in exceptions:
                 city = exceptions[city]
 
             # initialize
             if city not in cases_dict:
-                cases_dict[city] = {'totale positivi': {}, 'isolamento': {}}
+                cases_dict[city] = {'totale positivi': {},
+                                    'isolamento': {},
+                                    'attualmente positivi': {},
+                                    'totale deceduti': {},
+                                    'negativizzati virologici': {}}
             cases_dict[city]['totale positivi'][date] = row['totale positivi']
             # isolamento was not given from the beginning
             if 'isolamento' in df.columns:
                 cases_dict[city]['isolamento'][date] = int(row['isolamento'])
+            if 'attualmente positivi' in df.columns:
+                cases_dict[city]['attualmente positivi'][date] = int(row['attualmente positivi'])
+            if 'totale deceduti' in df.columns:
+                cases_dict[city]['totale deceduti'][date] = int(row['totale deceduti'])
+            if 'negativizzati virologici' in df.columns:
+                cases_dict[city]['negativizzati virologici'][date] = int(row['negativizzati virologici'])
 
     return cases_dict
 
