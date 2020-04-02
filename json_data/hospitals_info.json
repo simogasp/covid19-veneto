@@ -48,6 +48,20 @@
         "province": "Padova",
         "short name": "Villa Maria ODC"
     },
+    "Centro Servizi Casa Luigi e Augusta - Ormelle": {
+        "city": "Ormelle",
+        "latitude": "45.750462",
+        "longitude": "12.415917",
+        "province": "Treviso",
+        "short name": "Casa Luigi e Augusta Ormelle"
+    },
+    "Centro Servizi Civitas Vitae - Vedelago": {
+        "city": "Vedelago",
+        "latitude": "45.687299",
+        "longitude": "12.029753",
+        "province": "Treviso",
+        "short name": "Civitas Vitae Vedelago"
+    },
     "IRCCS - IOV": {
         "city": "Padova",
         "latitude": "",
@@ -82,6 +96,20 @@
         "longitude": "",
         "province": "Venezia",
         "short name": "Villa Salus"
+    },
+    "Ospedale comunita' Casa di Cura Rizzola": {
+        "city": "San Don\u00e0 di Piave",
+        "latitude": "45.632656",
+        "longitude": "12.563027",
+        "province": "Venezia",
+        "short name": "Ospedale comunita' Rizzola"
+    },
+    "Ospedale comunita' c/o Ospedale Adria": {
+        "city": "Adria",
+        "latitude": "45.048094",
+        "longitude": "12.055173",
+        "province": "Rovigo",
+        "short name": "Ospedale Adria"
     },
     "ULSS 1 - Ospedale Agordo": {
         "city": "Agordo",
