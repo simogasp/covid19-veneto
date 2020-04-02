@@ -1,4 +1,11 @@
-
+> **Notes**
+> 
+> 26/03/2020 - Added Marzana hospital for the first time
+> 27/03/2020 - Added Ospedale di comunità Villa Maria - Padova for the first time
+> 28/03/2020 - Added Casa di cura Villa Maria - Padova for the first time
+> 29/03/2020 - Added ODC Belluno for the first time
+> 31/03/2020 - Added new categories negativizzati virologici, attualmente positivi, totale decessi
+> 01/04/2020 - Added new hospitals Adria, Ormelle, Vedelago, Rizzola
 
 ## Repository structure
 
