@@ -239,6 +239,16 @@ def hospitals_sanity_check(case_dict: dict, hospital_info: dict):
                 ans = input('Add to the db? (y/n)')
                 if ans == 'y':
                     hospital_info[name] = {'short name': '', 'city': '', 'province': '', 'latitude': '', 'longitude': ''}
+                    ans = input('Enter city for ' + name + ': ')
+                    hospital_info[name]['city'] = ans
+                    ans = input('Enter province for ' + name + ': ')
+                    hospital_info[name]['province'] = ans
+                    ans = input('Enter short name for ' + name + ': ')
+                    hospital_info[name]['short name'] = ans
+                    ans = input('Enter latitude for ' + name + ': ')
+                    hospital_info[name]['latitude'] = ans
+                    ans = input('Enter longitude for ' + name + ': ')
+                    hospital_info[name]['longitude'] = ans
 
 
 def load_dict_from_json(filename: str) -> dict:
