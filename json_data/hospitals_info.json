@@ -69,6 +69,27 @@
         "province": "Padova",
         "short name": "IOV"
     },
+    "Ospedale Comunit\u00e0 Casa di Cura Rizzola": {
+        "city": "San Don\u00e0 di Piave",
+        "latitude": "45.632656",
+        "longitude": "12.563027",
+        "province": "Venezia",
+        "short name": "Ospedale comunit\u00e0 Rizzola"
+    },
+    "Ospedale Comunit\u00e0 Marostica": {
+        "city": "Marostica",
+        "latitude": "45.744016",
+        "longitude": "11.650379",
+        "province": "Vicenza",
+        "short name": "Marostica"
+    },
+    "Ospedale Comunit\u00e0 c/o Ospedale Adria": {
+        "city": "Adria",
+        "latitude": "45.048094",
+        "longitude": "12.055173",
+        "province": "Rovigo",
+        "short name": "Ospedale Adria"
+    },
     "Ospedale P. Pederzoli-Peschiera": {
         "city": "Peschiera",
         "latitude": "",
@@ -96,20 +117,6 @@
         "longitude": "",
         "province": "Venezia",
         "short name": "Villa Salus"
-    },
-    "Ospedale comunita' Casa di Cura Rizzola": {
-        "city": "San Don\u00e0 di Piave",
-        "latitude": "45.632656",
-        "longitude": "12.563027",
-        "province": "Venezia",
-        "short name": "Ospedale comunita' Rizzola"
-    },
-    "Ospedale comunita' c/o Ospedale Adria": {
-        "city": "Adria",
-        "latitude": "45.048094",
-        "longitude": "12.055173",
-        "province": "Rovigo",
-        "short name": "Ospedale Adria"
     },
     "ULSS 1 - Ospedale Agordo": {
         "city": "Agordo",
