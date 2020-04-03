@@ -6,6 +6,8 @@
 > 29/03/2020 - Added ODC Belluno for the first time
 > 31/03/2020 - Added new categories negativizzati virologici, attualmente positivi, totale decessi
 > 01/04/2020 - Added new hospitals Adria, Ormelle, Vedelago, Rizzola
+> 03/04/2020 - Added new hospitals Marostica and different tables for health care centers
+> 03/04/2020 - Switching to accented chars
 
 ## Repository structure
 
