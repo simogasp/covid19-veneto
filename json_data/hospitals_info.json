@@ -69,6 +69,13 @@
         "province": "Padova",
         "short name": "IOV"
     },
+    "Ospedale Comunit\u00e0 Camposampiero": {
+        "city": "Camposampiero",
+        "latitude": "45.564498",
+        "longitude": "11.933086",
+        "province": "Padova",
+        "short name": "Camposampiero OdC"
+    },
     "Ospedale Comunit\u00e0 Casa di Cura Rizzola": {
         "city": "San Don\u00e0 di Piave",
         "latitude": "45.632656",
@@ -82,6 +89,13 @@
         "longitude": "11.650379",
         "province": "Vicenza",
         "short name": "Marostica"
+    },
+    "Ospedale Comunit\u00e0 Vittorio Veneto": {
+        "city": "Vittorio Veneto",
+        "latitude": "45.987324",
+        "longitude": "12.319751",
+        "province": "Treviso",
+        "short name": "Vittorio Veneto"
     },
     "Ospedale Comunit\u00e0 c/o Ospedale Adria": {
         "city": "Adria",
@@ -349,12 +363,26 @@
         "province": "Vicenza",
         "short name": "Vicenza"
     },
+    "ULSS 9 - Ospedale Bussolengo": {
+        "city": "Bussolengo",
+        "latitude": "45.475857",
+        "longitude": "10.849273",
+        "province": "Verona",
+        "short name": "Bussolengo"
+    },
     "ULSS 9 - Ospedale Legnago": {
         "city": "Legnago",
         "latitude": "",
         "longitude": "",
         "province": "Verona",
         "short name": "Legnago"
+    },
+    "ULSS 9 - Ospedale Malcesine": {
+        "city": "Malcesine",
+        "latitude": "45.751770",
+        "longitude": "10.797965",
+        "province": "Verona",
+        "short name": "Malcesine"
     },
     "ULSS 9 - Ospedale Marzana": {
         "city": "Marzana",
