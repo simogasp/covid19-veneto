@@ -265,12 +265,12 @@
         "province": "Venezia",
         "short name": "Jesolo"
     },
-    "ULSS 4 - Ospedale San Dona' di Piave": {
-        "city": "San Dona' di Piave",
+    "ULSS 4 - Ospedale San Don\u00e0 di Piave": {
+        "city": "San Don\u00e0 di Piave",
         "latitude": "",
         "longitude": "",
         "province": "Venezia",
-        "short name": "San Dona'"
+        "short name": "San Don\u00e0"
     },
     "ULSS 5 - Ospedale Adria": {
         "city": "Adria",
