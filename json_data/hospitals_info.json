@@ -104,6 +104,13 @@
         "province": "Rovigo",
         "short name": "Ospedale Adria"
     },
+    "Ospedale Comunit\u00e0 di Castelfranco": {
+        "city": "Castelfranco Veneto",
+        "latitude": "45.676609",
+        "longitude": "11.932344",
+        "province": "Treviso",
+        "short name": "Castelfranco OdC"
+    },
     "Ospedale P. Pederzoli-Peschiera": {
         "city": "Peschiera",
         "latitude": "",
