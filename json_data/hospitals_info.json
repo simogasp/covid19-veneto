@@ -139,6 +139,13 @@
         "province": "Venezia",
         "short name": "Villa Salus"
     },
+    "Ospedale civ. Motta di Livenza - Treviso": {
+        "city": "Motta di Livenza",
+        "latitude": 45.773663,
+        "longitude": 12.598289,
+        "province": "Treviso",
+        "short name": "Motta di Livenza"
+    },
     "ULSS 1 - Ospedale Agordo": {
         "city": "Agordo",
         "latitude": "",
