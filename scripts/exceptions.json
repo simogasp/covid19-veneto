@@ -6,6 +6,7 @@
     "ULSS 9- Ospedale Marzana": "ULSS 9 - Ospedale Marzana",
     "Ospedale comunità Villa Maria - Padova": "Casa di Cura Villa Maria ODC - Padova",
     "Casa di Cura Villa Maria OdC - Padova": "Casa di Cura Villa Maria ODC - Padova",
+    "Casa di Cura Villa Maria- PD": "Casa di Cura Villa Maria ODC - Padova",
     "Ospedale Comunità Villa Maria (PD)": "Casa di Cura Villa Maria ODC - Padova",
     "Casa di cura Rizzola - OdC": "Casa di Cura Rizzola",
     "Ospedale Sant'Antonio": "Azienda Ospedale Università Padova- Ospedale S. Antonio",
@@ -20,7 +21,9 @@
     "Ospedale comunita' c/o Ospedale Adria": "Ospedale Comunità c/o Ospedale Adria",
     "Centro Servizi Casa Luigi e Augusta - Ormelle (TV)": "Centro Servizi Casa Luigi e Augusta - Ormelle",
     "Ospedale Comunità Marostica (VI)": "Ospedale Comunità Marostica",
-    "Ospedale Comunità Camposampiero (PD)": "Ospedale Comunità Camposampiero"
+    "Ospedale Comunità Camposampiero (PD)": "Ospedale Comunità Camposampiero",
+    "Struttura COVID - Vedelago (TV)": "Centro Servizi Civitas Vitae - Vedelago",
+    "Struttura COVID - Ormelle (TV)": "Centro Servizi Casa Luigi e Augusta - Ormelle"
   },
 
   "provinces": {
