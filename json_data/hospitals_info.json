@@ -265,6 +265,13 @@
         "province": "Venezia",
         "short name": "Jesolo"
     },
+    "ULSS 4 - Ospedale Portogruaro": {
+        "city": "Portogruaro",
+        "latitude": 45.770858,
+        "longitude": 12.841241,
+        "province": "Venezia",
+        "short name": "Portogruaro"
+    },
     "ULSS 4 - Ospedale San Don\u00e0 di Piave": {
         "city": "San Don\u00e0 di Piave",
         "latitude": "",
