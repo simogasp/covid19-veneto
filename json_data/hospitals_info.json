@@ -90,6 +90,13 @@
         "province": "Vicenza",
         "short name": "Marostica"
     },
+    "Ospedale Comunit\u00e0 SS. Giovanni e Paolo (VE)": {
+        "city": "Venezia",
+        "latitude": "45.439641",
+        "longitude": "12.341521",
+        "province": "Venezia",
+        "short name": "SS. Giovanni e Paolo OdC"
+    },
     "Ospedale Comunit\u00e0 Vittorio Veneto": {
         "city": "Vittorio Veneto",
         "latitude": "45.987324",
