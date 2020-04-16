@@ -69,6 +69,13 @@
         "province": "Padova",
         "short name": "IOV"
     },
+    "Ospedale Cinto Caomaggiore (VE)": {
+        "city": "Cinto Caomaggiore",
+        "latitude": "45.833433",
+        "longitude": "12.784424",
+        "province": "Venezia",
+        "short name": "Cinto Caomaggiore"
+    },
     "Ospedale Comunit\u00e0 Camposampiero": {
         "city": "Camposampiero",
         "latitude": "45.564498",
