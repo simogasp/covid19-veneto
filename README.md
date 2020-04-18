@@ -16,6 +16,8 @@
 >
 > 03/04/2020 - Switching to accented chars
 >
+> 17/04/2020 - Reports are now only at 8:00 AM
+>
 
 ## Repository structure
 
