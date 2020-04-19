@@ -328,6 +328,13 @@
         "province": "Padova",
         "short name": "Cittadella"
     },
+    "ULSS 6 - Ospedale Conselve": {
+        "city": "Conselve",
+        "latitude": "45.233252",
+        "longitude": "11.870850",
+        "province": "Padova",
+        "short name": "Conselve"
+    },
     "ULSS 6 - Ospedale Piove di Sacco": {
         "city": "Piove di Sacco",
         "latitude": "",
@@ -397,6 +404,13 @@
         "longitude": "",
         "province": "Vicenza",
         "short name": "Vicenza"
+    },
+    "ULSS 9 - Ospedale Bovolone": {
+        "city": "Bovolone",
+        "latitude": "45.260614",
+        "longitude": "11.119657",
+        "province": "Verona",
+        "short name": "Bovolone"
     },
     "ULSS 9 - Ospedale Bussolengo": {
         "city": "Bussolengo",
