@@ -48,6 +48,13 @@
         "province": "Padova",
         "short name": "Villa Maria ODC"
     },
+    "Casa di cura Policlinico San Marco Mestre": {
+        "city": "Mestre",
+        "latitude": "45.493014",
+        "longitude": "12.248155",
+        "province": "Venezia",
+        "short name": "Policlinico San Marco"
+    },
     "Centro Servizi Casa Luigi e Augusta - Ormelle": {
         "city": "Ormelle",
         "latitude": "45.750462",
