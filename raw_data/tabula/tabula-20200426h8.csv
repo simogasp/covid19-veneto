@@ -1,0 +1,105 @@
+"Raggruppamenti sulla base del domicilio del
+soggetto positivo SARS-CoV-2","TOTALE CASI
+con tampone
+positivo -dato
+cumulativo","Δ Totale casi
+positivi","Casi
+attualmente
+positivi","Deceduti (in
+ospedale +
+extra-ospedale)
+-dato
+cumulativo","Negativizzati
+virologici -
+dato
+cumulativo",,"Soggetti in
+ISOLAMENTO
+DOMICILIARE
+(dato del 25.04
+ore 20.00)"
+Padova (escluso domiciliati Vo'),3731,+16),1423,228,2080,1139,
+Cluster domiciliati Comune di Vò,87,0,4,3,80,,
+Treviso,2453,+14),1179,238,1036,1533,
+Venezia,2347,+5),875,193,1279,966,
+Verona,4492,+19),2967,352,1173,1322,
+Vicenza,2554,+18),1492,196,866,1482,
+Belluno,1050,+3),701,66,283,1282,
+Rovigo,417,+1),277,28,112,595,
+Domicilio fuori Veneto,294,+3),175,10,109,,
+Assegnazione in corso,46,+1),45,1,0,,
+Struttura di ricovero,"Pazienti  in AREA
+NON CRITICA^","Δ area non
+critica","Pazienti in
+TERAPIA
+INTENSIVA ^",Δ Ter Int,"Negativizzati
+virologici
+attualmente
+ricoverati**","dimessi dal
+21.2","decessi dal
+21.2*",Δ decessi
+Azienda Ospedale Università Padova,59,-3,12,+1),31,277,56,0
+Ospedale Sant'Antonio,0,0,0,0,0,0,1,0
+"Azienda Ospedaliera Universitaria Integrata di
+Verona - Borgo Roma",40,-1,10,0,14,190,102,+1)
+"Azienda Ospedaliera Universitaria Integrata di
+Verona - Borgo Trento",16,0,11,0,6,67,27,+1)
+ULSS 1 - Ospedale Belluno,42,-1,7,0,1,66,35,+2)
+ULSS 1 - Ospedale Feltre,0,0,0,0,0,12,6,0
+ULSS 2 - Ospedale Treviso,23,0,8,0,5,203,96,0
+ULSS 2 - Ospedale Oderzo,6,0,3,0,4,18,18,0
+ULSS 2 - Ospedale Conegliano,4,0,0,0,0,16,20,0
+ULSS 2 - Ospedale Vittorio Veneto °,59,0,6,0,24,157,27,0
+ULSS 2 - Ospedale Castelfranco,3,0,0,0,0,38,8,0
+ULSS 2 - Ospedale Montebelluna,13,0,0,0,3,47,12,0
+Ospedale S. Camillo-Treviso °,18,0,0,0,6,40,4,0
+Ospedale Riabilitativo  Motta di Livenza - Treviso,8,0,0,0,8,0,0,0
+ULSS 3 - Ospedale Mestre,19,+2),2,0,11,72,37,0
+ULSS 3 - Ospedale Venezia,6,+3),0,-4,6,25,14,+1)
+ULSS 3 - Ospedale Mirano,1,0,0,0,1,9,9,0
+ULSS 3 - Ospedale Dolo °,77,+6),6,0,25,86,65,+1)
+ULSS 3 - Ospedale Chioggia,1,0,0,0,1,1,3,0
+Ospedale Villa Salus-Mestre °,48,0,0,0,15,71,5,0
+ULSS 4 - Ospedale San Donà di Piave,0,-1,0,0,0,0,0,0
+ULSS 4 - Ospedale Jesolo °,29,+1),4,-1,12,69,24,0
+Casa di Cura Rizzola,4,0,0,0,1,14,1,0
+ULSS 5 - Ospedale Rovigo,1,0,0,0,1,22,5,0
+ULSS 5 - Ospedale Trecenta °,39,-1,4,+1),11,12,22,0
+ULSS 5 - Ospedale Adria,2,0,0,0,2,1,0,0
+ULSS 6 - Ospedale Schiavonia °,95,+2),5,0,8,215,90,0
+ULSS 6 - Ospedale Piove di Sacco,0,0,0,0,0,1,0,0
+ULSS 6 - Ospedale Cittadella,0,0,0,0,0,2,7,0
+ULSS 6 - Ospedale Camposampiero,4,0,0,0,2,2,7,0
+ULSS 6 - Ospedale Conselve,1,0,0,0,1,0,0,0
+ULSS 7 - Ospedale Santorso °,107,-1,9,0,44,122,54,+1)
+ULSS 7 - Ospedale Bassano,0,0,0,0,0,20,13,0
+ULSS 7 - Ospedale Asiago,2,0,0,0,1,7,10,0
+ULSS 8 - Ospedale Vicenza,42,+4),13,-3,12,93,72,+3)
+ULSS 8 - Ospedale Noventa Vicentina,18,-2,0,0,3,35,1,0
+ULSS 8 - Ospedale Arzignano,0,0,0,0,0,0,1,0
+ULSS 8 - Ospedale Valdagno,11,0,0,0,2,18,5,0
+ULSS 9 - Ospedale Legnago,30,-11,7,0,14,56,46,+3)
+ULSS 9 - Ospedale San Bonifacio,3,-1,0,0,0,21,23,+1)
+ULSS 9 - Ospedale Villafranca °,92,-4,9,0,17,120,73,+4)
+ULSS 9 - Ospedale Marzana,61,+1),0,0,32,17,3,0
+ULSS 9 - Ospedale Bussolengo,23,+2),0,0,12,24,3,0
+Ospedale Sacro Cuore Don Calabria-Negrar,39,-4,7,+1),13,113,31,0
+Ospedale P. Pederzoli-Peschiera,48,+1),1,0,6,74,35,0
+Istituto Oncologico Veneto,3,0,0,0,3,0,0,0
+TOTALE REGIONE VENETO,1097,-8,124,-5,358,2453,1071,+18),
+Struttura di ricovero,"Pazienti
+presenti^",Δ paz. presenti,"Negativizzati
+virologici
+attualmente
+ricoverati**",dimessi dal 21.2,"decessi dal
+21.2*",Δ decessi,
+Ospedale di Comunità Belluno (BL),16,0,0,18,9,0,
+Ospedale di Comunità  Agordo (BL),31,0,5,8,1,0,
+Ospedale di Comunità di Castelfranco  (TV),1,0,0,3,0,0,
+Struttura COVID - Vedelago (TV),18,0,11,23,3,0,
+Struttura COVID - Ormelle (TV),6,0,3,20,4,0,
+Ospedale di Comunità Vittorio Veneto (TV),4,0,2,28,2,0,
+Ospedale di Comunità Casa di Cura Rizzola (VE),6,-1,2,4,1,+1),
+Ospedale di Cinto Caomaggiore (VE),2,0,2,0,0,0,
+Ospedale di Comunità Villa Maria (PD),9,0,4,23,1,0,
+Ospedale di Comunità Camposampiero (PD),11,-1,7,12,0,0,
+Ospedale di Comunità Marostica (VI),20,0,1,6,2,0,
