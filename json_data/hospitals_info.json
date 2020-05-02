@@ -272,6 +272,13 @@
         "province": "Venezia",
         "short name": "Mirano"
     },
+    "ULSS 3 - Ospedale Noale": {
+        "city": "Noale",
+        "latitude": "45.552163",
+        "longitude": "12.074962",
+        "province": "Venezia",
+        "short name": "Noale"
+    },
     "ULSS 3 - Ospedale Venezia": {
         "city": "Venezia",
         "latitude": "",
