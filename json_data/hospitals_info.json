@@ -27,6 +27,13 @@
         "province": "Verona",
         "short name": "Borgo Trento"
     },
+    "Casa di Cura Giovanni XXIII Monastier -TV": {
+        "city": "Monastier di Treviso",
+        "latitude": "45.656183",
+        "longitude": "12.427137",
+        "province": "Treviso",
+        "short name": "CdC Monastier"
+    },
     "Casa di Cura Rizzola": {
         "city": "San Don\u00e0 di Piave",
         "latitude": "45.632699",
