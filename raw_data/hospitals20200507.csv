@@ -1,0 +1,65 @@
+struttura,non critici,delta,terapia intensiva,delta,negativizzati ricoverati,dimessi,decessi,delta
+Azienda Ospedale Università Padova,41,-3,10,0,38,297,64,0
+Ospedale Sant'Antonio,0,0,0,0,0,0,1,0
+"Azienda Ospedaliera Universitaria Integrata di
+Verona - Borgo Roma",13,-1,1,0,5,208,114,0
+"Azienda Ospedaliera Universitaria Integrata di
+Verona - Borgo Trento",16,+2),11,-2,11,72,31,0
+ULSS 1 - Ospedale Belluno,24,0,5,0,2,78,48,0
+ULSS 1 - Ospedale Feltre,0,0,0,0,0,12,6,0
+ULSS 2 - Ospedale Treviso,20,-2,5,0,7,213,102,0
+ULSS 2 - Ospedale Oderzo,3,0,1,0,2,20,21,0
+ULSS 2 - Ospedale Conegliano,0,-2,2,0,1,18,20,0
+ULSS 2 - Ospedale Vittorio Veneto °,39,-1,0,0,6,186,32,0
+ULSS 2 - Ospedale Castelfranco,1,0,0,0,1,40,8,0
+ULSS 2 - Ospedale Montebelluna,4,0,1,0,5,51,12,0
+Ospedale S. Camillo-Treviso °,2,0,0,0,2,53,4,0
+Ospedale Riabilitativo  Motta di Livenza - Treviso,11,+1),0,0,11,0,0,0
+Casa di Cura Giovanni XXIII Monastier -TV,1,0,0,0,1,0,0,0
+ULSS 3 - Ospedale Mestre,5,0,6,0,11,75,39,0
+ULSS 3 - Ospedale Venezia,3,0,0,0,3,26,15,0
+ULSS 3 - Ospedale Mirano,0,0,1,0,1,9,9,0
+ULSS 3 - Ospedale Dolo °,92,+3),4,+1),22,103,90,0
+ULSS 3 - Ospedale Chioggia,0,0,0,0,0,2,3,0
+ULSS 3 - Ospedale di Noale,9,-2,0,0,0,0,3,0
+Ospedale Villa Salus (VE)°,33,+1),0,0,11,91,9,+1)
+Casa di cura San Marco - Mestre (VE),1,0,0,0,1,0,0,0
+ULSS 4 - Ospedale Jesolo °,22,0,4,0,12,81,25,0
+Casa di Cura Rizzola,0,0,0,0,0,16,1,0
+ULSS 5 - Ospedale Rovigo,2,+1),0,-1,2,24,5,0
+ULSS 5 - Ospedale Trecenta °,25,-1,2,0,9,24,24,0
+ULSS 5 - Ospedale Adria,3,0,0,0,3,3,0,0
+ULSS 6 - Ospedale Schiavonia °,65,+2),4,-1,15,245,99,0
+ULSS 6 - Ospedale Piove di Sacco,0,0,1,0,0,1,0,0
+ULSS 6 - Ospedale Cittadella,1,0,0,0,0,2,7,0
+ULSS 6 - Ospedale Camposampiero,4,0,1,0,5,3,7,0
+ULSS 6 - Ospedale Conselve,1,0,0,0,1,0,0,0
+Casa di cura Villa Maria (PD),2,+2),0,0,2,0,0,0
+ULSS 7 - Ospedale Santorso °,101,-1,5,0,46,162,67,0
+ULSS 7 - Ospedale Bassano,1,0,0,0,1,20,13,0
+ULSS 7 - Ospedale Asiago,0,0,0,0,0,8,11,0
+ULSS 8 - Ospedale Vicenza,37,0,5,0,19,116,93,0
+ULSS 8 - Ospedale Noventa Vicentina,20,0,0,0,15,39,2,0
+ULSS 8 - Ospedale Arzignano,0,-1,1,+1),1,0,1,0
+ULSS 8 - Ospedale Valdagno,0,0,0,0,0,24,5,0
+ULSS 9 - Ospedale Legnago,25,-2,1,0,12,65,49,0
+ULSS 9 - Ospedale San Bonifacio,8,0,1,0,3,24,25,0
+ULSS 9 - Ospedale Villafranca °,85,-4,9,+1),13,149,93,+2)
+ULSS 9 - Ospedale Marzana,40,-8,0,0,20,43,5,+1)
+ULSS 9 - Ospedale Bussolengo,20,-3,0,0,3,41,3,0
+ULSS 9 - Ospedale San Biagio di Bovolone,4,+1),0,0,3,0,0,0
+Ospedale Sacro Cuore Don Calabria-Negrar,31,0,3,0,17,122,34,0
+Ospedale P. Pederzoli-Peschiera,37,-2,2,0,26,84,38,0
+Istituto Oncologico Veneto,0,0,0,0,0,2,1,0
+Ospedale di Comunità Belluno (BL),13,0,,,2,26,14,0
+Ospedale di Comunità  Agordo (BL),24,0,,,2,17,1,0
+Ospedale di Comunità di Castelfranco  (TV),1,-1,,,1,4,0,0
+Struttura COVID - Vedelago (TV),22,0,,,7,32,3,0
+Struttura COVID - Ormelle (TV),0,0,,,0,24,4,0
+Ospedale di Comunità Vittorio Veneto (TV),19,-1,,,13,29,2,0
+Ospedale di Comunità SS. Giovanni e Paolo (VE),1,0,,,1,0,0,0
+Ospedale di Comunità Casa di Cura Rizzola (VE),0,0,,,0,11,1,0
+Ospedale di Cinto Caomaggiore (VE),3,0,,,2,0,0,0
+Ospedale di Comunità Villa Maria (PD),7,-1,,,2,32,1,0
+Ospedale di Comunità Camposampiero (PD),11,0,,,7,15,1,0
+Ospedale di Comunità Marostica (VI),16,+2),,,3,12,3,0
