@@ -18,6 +18,9 @@
 >
 > 17/04/2020 - Reports are now only at 8:00 AM
 >
+> 04/05/2020 - Reports are now back at 17:00
+>
+> 08/05/2020 - new table format
 
 ## Repository structure
 

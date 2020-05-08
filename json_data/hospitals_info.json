@@ -111,6 +111,13 @@
         "province": "Vicenza",
         "short name": "Marostica"
     },
+    "Ospedale Comunit\u00e0 Montagnana (PD)": {
+        "city": "Montagnana",
+        "latitude": "45.237070",
+        "longitude": "11.459622",
+        "province": "Padova",
+        "short name": "Montagnana"
+    },
     "Ospedale Comunit\u00e0 SS. Giovanni e Paolo (VE)": {
         "city": "Venezia",
         "latitude": "45.439641",
