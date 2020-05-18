@@ -111,6 +111,13 @@
         "province": "Venezia",
         "short name": "Ospedale comunit\u00e0 Rizzola"
     },
+    "Ospedale Comunit\u00e0 Conselve (PD)": {
+        "city": "Conselve",
+        "latitude": "45.233204",
+        "longitude": "11.870980",
+        "province": "Padova",
+        "short name": "Conselve"
+    },
     "Ospedale Comunit\u00e0 Marostica": {
         "city": "Marostica",
         "latitude": "45.744016",
