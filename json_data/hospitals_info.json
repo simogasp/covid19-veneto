@@ -118,6 +118,13 @@
         "province": "Venezia",
         "short name": "Ospedale comunit\u00e0 Rizzola"
     },
+    "Ospedale Comunit\u00e0 Civitas vitae (PD)": {
+        "city": "Padova",
+        "latitude": "45.368633",
+        "longitude": "11.826268",
+        "province": "Padova",
+        "short name": "Civitas Vitae"
+    },
     "Ospedale Comunit\u00e0 Conselve (PD)": {
         "city": "Conselve",
         "latitude": "45.233204",
