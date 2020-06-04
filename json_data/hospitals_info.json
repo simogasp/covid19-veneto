@@ -62,6 +62,13 @@
         "province": "Venezia",
         "short name": "Policlinico San Marco"
     },
+    "Casa di cura Villa Garda (VR)": {
+        "city": "Garda",
+        "latitude": "45.581893",
+        "longitude": "10.716120",
+        "province": "Verona",
+        "short name": "Villa Garda"
+    },
     "Centro Servizi Casa Luigi e Augusta - Ormelle": {
         "city": "Ormelle",
         "latitude": "45.750462",
