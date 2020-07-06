@@ -90,6 +90,13 @@
         "province": "Padova",
         "short name": "IOV"
     },
+    "OSP. Fatebenefratelli (Venezia)": {
+        "city": "Venezia",
+        "latitude": "45.446725",
+        "longitude": "12.330390",
+        "province": "Venezia",
+        "short name": "Fatebenefratelli"
+    },
     "Ospedale Cinto Caomaggiore (VE)": {
         "city": "Cinto Caomaggiore",
         "latitude": "45.833433",
